@@ -5,13 +5,13 @@ y <- c("tibble","YieldCurve", "xts", "ggplot2", "lubridate", "Rblpapi", "data.ta
 sapply(y, require, character.only = T)
 
 
-
 #Data Management
 #==============================================================================================
-#1) Obtain values from csv
-funding_curve <- na.omit(read.csv("Z:/Jerome/R Studio/ALM GMD Market Sheet/EUR.csv", sep=","))
+#1) Obtain values from csv 
+#THIS PORTION OF DATA IS UNAVAILABLE TO THE PUBLIC
+funding_curve <- na.omit(read.csv("Z:/Caleb/R Studio/ALM GMD Market Sheet/EUR.csv", sep=","))
 casa_pp <- na.omit(read.csv("Z:/Caleb/Funding Curve Estimation/CASA PP Grid.csv", sep=";", dec=","))
-ratio <- read.csv("Z:/Jerome/R Studio/ALM GMD Market Sheet/Ratio.csv")
+ratio <- read.csv("Z:/Caleb/R Studio/ALM GMD Market Sheet/Ratio.csv")
 
 funding_5Y <- funding_curve%>%dplyr::select(X, X5.ans)
 funding_5Y$X <- mdy(funding_5Y$X) 
