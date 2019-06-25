@@ -4,10 +4,9 @@ y <- c("tibble","YieldCurve", "xts", "ggplot2", "lubridate", "Rblpapi", "data.ta
        "cluster", "SuperLearner", "extraTrees", "ranger", "arm", "xgboost", "moments")
 sapply(y, require, character.only = T)
 
-
-
 #==============================================================================================
 #1) Obtain values from csv
+#DATA UNAVAILABLE TO THE PUBLIC
 funding_curve <- na.omit(read.csv("Z:/Jerome/R Studio/ALM GMD Market Sheet/EUR.csv", sep=","))
 casa_pp <- na.omit(read.csv("Z:/Caleb/Funding Curve Estimation/CASA PP Grid.csv", sep=";", dec=","))
 
